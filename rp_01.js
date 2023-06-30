@@ -42,7 +42,7 @@ var randomRelatedIndex, showRelatedPost;
       , e = (typeof labelArray == "object" && labelArray.length > 0) ? "/-/" + l(labelArray)[0] : "";
 
     // Mengganti spasi menjadi "%20" jika terdiri dari dua kata
-    e = e.replace(/ /g, "%20");
+    e = encodeURIComponent(e);
 
     var h = function(b) {
         var c = b.feed.openSearch$totalResults.$t - d.numPosts
